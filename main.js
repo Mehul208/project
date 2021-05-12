@@ -1,14 +1,11 @@
 function calc()
 {
-    var final=document.getElementsByClassName("result");
-    var x=document.getElementById("num1").value;
-    var y=document.getElementById("num2").value;
-    var op=document.getElementById("operator").value;
+    var final = document.querySelector(".result");
+    var x = parseInt(document.querySelector("#num1").value);
+    var y = parseInt(document.querySelector("#num2").value);
+    var op = document.querySelector("#operator").value;
     var result;
-
-    x=parseInt(x);
-    y=parseInt(y);
-
+    
     if(op=="add")
     {
         result=x+y;
@@ -25,5 +22,6 @@ function calc()
     {
         result=x/y;
     }
+    console.log(result);
     final.innerHTML=result;
 }
